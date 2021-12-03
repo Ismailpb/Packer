@@ -35,7 +35,7 @@ $ mv packer /usr/bin
 - The environment variables has to be set in the variables section of the main build file : AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 - cd into Packer folder  from the cloned repository.
-- Create a file name "main.pkr.hcl(you need to choose the file extension as pkr.hcl) and put the source codes.
+- Create a file name "**main.pkr.hcl**(you need to choose the file extension as pkr.hcl) and put the source codes.
 - Once the codes were written, run the below commands
 
 ```
