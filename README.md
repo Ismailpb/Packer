@@ -1,4 +1,4 @@
-# packer-ami-template
+# Packer-ami-template
 
 It is just a simple project to create an AMI that is pre-configured to host a simple HTML website
 Description
@@ -10,7 +10,7 @@ Requirements
     Packer
     Linux Operating system
 
-Installation
+# Installation
 
     To install packer, run the following commands to download the package
 
@@ -26,7 +26,7 @@ $ packer
 
 $ packer --version
 
-Usage
+# Usage
 
     The environment vaiables has to be set in the vaiables section of the main build file : AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
