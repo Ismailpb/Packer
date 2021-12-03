@@ -6,12 +6,12 @@ variable "ami_name" {
 
 variable "access_key" {
   type    = string
-  default = "AKIA3Z7P4Y32Q45MCJFU"
+  default = "XXXXXXXXXXXXXXXXX"
 }
 
 variable "secret_key" {
   type    = string
-  default = "LXUAxeB/2OZ06tAG1cti6bH+OzpX/YeDp+wlZSOA"
+  default = "YYYYYYYYYYYYYYYYYYYYYYY"
 }
 
 ############################################# Image creation Section #############################################
