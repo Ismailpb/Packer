@@ -3,7 +3,7 @@ Actually Packer is a open source tool for creating identical machine images for 
 
 # Requirements
 
-1.Need to install Packer.
+1.Need to install [Packer](https://releases.hashicorp.com/packer/1.7.8/packer_1.7.8_linux_amd64.zip).
 
 2.IAM user with administrator access (For EC2).
 
@@ -13,17 +13,17 @@ Actually Packer is a open source tool for creating identical machine images for 
 
 1.At first we need to install Packer in our local machine.
 Since my local machine is running with Linux OS, so I choose the Linux Package from https://www.packer.io/downloads
-
+```
 $ wget https://releases.hashicorp.com/packer/1.7.8/packer_1.7.8_linux_amd64.zip
 
 $ unzip packer_1.7.8_linux_amd64.zip
 
 $ mv packer /usr/bin
-
+```
 2.Once the packer installation completed, You can verify whether the packer is installed in your local machine or not by using the below command
-
+```
  $ packer --version
- 
+ ```
  +++++++++
  
  packer --version
@@ -38,27 +38,28 @@ $ mv packer /usr/bin
 - Create a file name "main.pkr.hcl(you need to choose the file extension as pkr.hcl) and put the source codes.
 - Once the codes were written, run the below commands
 
-
+```
    $packer init main.pkr.hcl
    
    $packer validate main.pkr.hcl
    
    $packer build main.pkr.hcl
+ ```
 
 This creates a new EC2 instance based on source_ami, install softwares, stops the instance, creates an AMI based on the new instance, and then terminates the EC2 instance.
 
  # Result
  -----------------------------------------------
  You can use the below command to validate the file.
- 
+ ```
   #packer validate main.pkr.hcl
- 
+ ```
 The configuration is valid.
 
 Once the file is validated, you can build the file using
-
+```
  #packer build main.pkr.hcl
-
+```
 ## Sample output
 
 linux-ami.amazon-ebs.Webserver-VM: output will be in this color.
@@ -146,6 +147,6 @@ linux-ami.amazon-ebs.Webserver-VM: output will be in this color.
 
 # Validate Result
 
- Once it completed, log into the AWS console >> EC2 >> Images >> AMIs. From there verify the newly created AMI is listed or not.
+ Once it completed, log into the **AWS console >> EC2 >> Images >> AMIs**. From there verify the newly created AMI is listed or not.
 
  If it is listed, you can use that AMI to launch an Instance with sample website.
