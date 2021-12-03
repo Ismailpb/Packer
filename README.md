@@ -15,7 +15,9 @@ Requirements
     To install packer, run the following commands to download the package
 
 $ wget https://releases.hashicorp.com/packer/1.7.8/packer_1.7.8_linux_amd64.zip
+
 $ unzip packer_1.7.8_linux_amd64.zip
+
 $ mv packer /usr/bin/
 
     After installing Packer, verify the installation is working by checking that the packer is available:
