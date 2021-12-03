@@ -48,7 +48,7 @@ $ mv packer /usr/bin
 This creates a new EC2 instance based on source_ami, install softwares, stops the instance, creates an AMI based on the new instance, and then terminates the EC2 instance.
 
  # Result
- 
+ -----------------------------------------------
  You can use the below command to validate the file.
  
   #packer validate main.pkr.hcl
@@ -59,11 +59,11 @@ Once the file is validated, you can build the file using
 
  #packer build main.pkr.hcl
 
-Sample results
+## Sample output
 
 linux-ami.amazon-ebs.Webserver-VM: output will be in this color.
+  
     linux-ami.amazon-ebs.Webserver-VM:
-    linux-ami.amazon-ebs.Webserver-VM: Dependencies Resolved
     linux-ami.amazon-ebs.Webserver-VM:
     linux-ami.amazon-ebs.Webserver-VM: ================================================================================
     linux-ami.amazon-ebs.Webserver-VM:  Package                Arch      Version                   Repository     Size
@@ -136,44 +136,13 @@ linux-ami.amazon-ebs.Webserver-VM: output will be in this color.
     linux-ami.amazon-ebs.Webserver-VM: Installed:
     linux-ami.amazon-ebs.Webserver-VM:   git.x86_64 0:2.32.0-1.amzn2.0.1         httpd.x86_64 0:2.4.51-1.amzn2
     linux-ami.amazon-ebs.Webserver-VM:
-    linux-ami.amazon-ebs.Webserver-VM: Dependency Installed:
-    linux-ami.amazon-ebs.Webserver-VM:   apr.x86_64 0:1.7.0-9.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   apr-util.x86_64 0:1.6.1-5.amzn2.0.2
-    linux-ami.amazon-ebs.Webserver-VM:   apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2
-    linux-ami.amazon-ebs.Webserver-VM:   emacs-filesystem.noarch 1:27.2-4.amzn2.0.1
-    linux-ami.amazon-ebs.Webserver-VM:   generic-logos-httpd.noarch 0:18.0.0-4.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   git-core.x86_64 0:2.32.0-1.amzn2.0.1
-    linux-ami.amazon-ebs.Webserver-VM:   git-core-doc.noarch 0:2.32.0-1.amzn2.0.1
-    linux-ami.amazon-ebs.Webserver-VM:   httpd-filesystem.noarch 0:2.4.51-1.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   httpd-tools.x86_64 0:2.4.51-1.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   mailcap.noarch 0:2.1.41-2.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   mod_http2.x86_64 0:1.15.19-1.amzn2.0.1
-    linux-ami.amazon-ebs.Webserver-VM:   perl-Error.noarch 1:0.17020-2.amzn2
-    linux-ami.amazon-ebs.Webserver-VM:   perl-Git.noarch 0:2.32.0-1.amzn2.0.1
-    linux-ami.amazon-ebs.Webserver-VM:   perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+
     linux-ami.amazon-ebs.Webserver-VM:
     linux-ami.amazon-ebs.Webserver-VM: Complete!
-==> linux-ami.amazon-ebs.Webserver-VM: Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
-==> linux-ami.amazon-ebs.Webserver-VM: Cloning into 'support'...
-==> linux-ami.amazon-ebs.Webserver-VM: Stopping the source instance...
-    linux-ami.amazon-ebs.Webserver-VM: Stopping instance
-==> linux-ami.amazon-ebs.Webserver-VM: Waiting for the instance to stop...
-==> linux-ami.amazon-ebs.Webserver-VM: Creating AMI linux-demo-app from instance i-0a84b26fc430cc6b5
-    linux-ami.amazon-ebs.Webserver-VM: AMI: ami-0d5b1c049abfa1194
-==> linux-ami.amazon-ebs.Webserver-VM: Waiting for AMI to become ready...
-==> linux-ami.amazon-ebs.Webserver-VM: Skipping Enable AMI deprecation...
-==> linux-ami.amazon-ebs.Webserver-VM: Terminating the source AWS instance...
-==> linux-ami.amazon-ebs.Webserver-VM: Cleaning up any extra volumes...
-==> linux-ami.amazon-ebs.Webserver-VM: No volumes to clean up, skipping
-==> linux-ami.amazon-ebs.Webserver-VM: Deleting temporary security group...
-==> linux-ami.amazon-ebs.Webserver-VM: Deleting temporary keypair...
-Build 'linux-ami.amazon-ebs.Webserver-VM' finished after 3 minutes 17 seconds.
-
-==> Wait completed after 3 minutes 17 seconds
-
-==> Builds finished. The artifacts of successful builds are:
---> linux-ami.amazon-ebs.Webserver-VM: AMIs were created:
-ap-south-1: ami-0d5b1c049abfa1194
+    Wait completed after 3 minutes 17 seconds
+    Builds finished. The artifacts of successful builds are:
+    linux-ami.amazon-ebs.Webserver-VM: AMIs were created:
+    ap-south-1: ami-0d5b1c049abfa1194
 
 # Validate Result
 
