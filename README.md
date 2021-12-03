@@ -178,5 +178,5 @@ ap-south-1: ami-0d5b1c049abfa1194
 # Validate Result
 
  Once it completed, log into the AWS console >> EC2 >> Images >> AMIs. From there verify the newly created AMI is listed or not.
- 
+
  If it is listed, you can use that AMI to launch an Instance with sample website.
