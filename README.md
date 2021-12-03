@@ -26,8 +26,8 @@ $ mv packer /usr/bin
  ```
  +++++++++
  
- packer --version
-1.7.8
+ **packer --version
+1.7.8**
 
  +++++++++
  
