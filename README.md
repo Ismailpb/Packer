@@ -49,7 +49,7 @@ $ mv packer /usr/bin
 This creates a new EC2 instance based on source_ami, install softwares, stops the instance, creates an AMI based on the new instance, and then terminates the EC2 instance.
 
  # Result
- -----------------------------------------------
+ 
  You can use the below command to validate the file.
  ```
   #packer validate main.pkr.hcl
