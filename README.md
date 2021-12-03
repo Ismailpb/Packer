@@ -1,4 +1,4 @@
-# packer-ami-template
+# Packer-ami-template
 
 It is just a simple project to create an AMI that is pre-configured to host a simple HTML website
 
